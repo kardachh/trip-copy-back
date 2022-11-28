@@ -4,7 +4,7 @@ import { initializeApp } from "firebase/app";
 import { ref, get, getDatabase } from "firebase/database";
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
