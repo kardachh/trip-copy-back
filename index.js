@@ -2,6 +2,7 @@ import express from "express";
 import * as path from "path";
 import { initializeApp } from "firebase/app";
 import { ref, get, getDatabase } from "firebase/database";
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -34,17 +35,7 @@ const readDataFromFirebase = async (id) =>
       console.error(error);
     });
 
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Credentials", true);
-  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin,X-Requested-With,Content-Type,Accept,content-type,application/json,Access-Control-Request-Headers"
-  );
-  console.log("headers added")
-  next();
-});
+app.use(cors());
 
 app.get("/", (req, res) => {
   readDataFromFirebase().then((r) => {
