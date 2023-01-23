@@ -9,13 +9,12 @@ const PORT = process.env.PORT || 5000;
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAUBQosxpjxI2BtKYbkYErCKQZ4wE6Jy4M",
-  authDomain: "tripadvisor-copy.firebaseapp.com",
-  databaseURL: "https://tripadvisor-copy-default-rtdb.firebaseio.com",
-  projectId: "tripadvisor-copy",
-  storageBucket: "tripadvisor-copy.appspot.com",
-  messagingSenderId: "889726918247",
-  appId: "1:889726918247:web:13dbea05e74f55ecdf7ec2",
+  apiKey: "AIzaSyBG1vtZvk39qu54WTcZOFnWxvD6tLM8Bjw",
+  authDomain: "putevoditel-41656.firebaseapp.com",
+  projectId: "putevoditel-41656",
+  storageBucket: "putevoditel-41656.appspot.com",
+  messagingSenderId: "219263055462",
+  appId: "1:219263055462:web:00f8f1155d2eee28e31fa7"
 };
 
 const appFirebase = initializeApp(firebaseConfig);
